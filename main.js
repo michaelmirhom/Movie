@@ -84,3 +84,8 @@ function saveToFavorites(id) {
     } else {
         favorites = [];
     }
+    if (!favorites.includes(id)) {
+        favorites.push(id);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+}
