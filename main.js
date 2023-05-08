@@ -97,3 +97,9 @@ function removeFromFavorites(id) {
         favorites = JSON.parse(favorites);
         // Find the index of the movie ID in the favorites list
         const index = favorites.indexOf(id);
+        if (index !== -1) {
+            favorites.splice(index, 1);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+    }
+}
