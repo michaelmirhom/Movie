@@ -89,3 +89,11 @@ function saveToFavorites(id) {
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }
 }
+function removeFromFavorites(id) {
+    // Get the current list of favorites from local storage
+    let favorites = localStorage.getItem('favorites');
+
+    if (favorites) {
+        favorites = JSON.parse(favorites);
+        // Find the index of the movie ID in the favorites list
+        const index = favorites.indexOf(id);
