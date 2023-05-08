@@ -1,0 +1,4 @@
+{
+    "/api/movies/*": "/movies$1"
+  }
+  
