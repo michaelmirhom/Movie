@@ -1,5 +1,5 @@
-# Movie
-Movie is a web application that allows users to search for movies, view movie details, and save their favorite movies for easy access later on. It uses a custom JSON database served by json-server to fetch movie information and is built using HTML, CSS, and JavaScript.
+# MovieFinder
+MovieFinder is a web application that allows users to search for movies, view movie details, and save their favorite movies for easy access later on. It uses a custom JSON database served by json-server to fetch movie information and is built using HTML, CSS, and JavaScript.
 # Installation
 To get started with the MovieFinder project, follow these steps:
 1. Clone the repository to your local machine.
