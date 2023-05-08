@@ -1,0 +1,33 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Movie 1",
+        "year": "2000",
+        "poster": "https://posters.movieposterdb.com/23_05/2023/27512578/l_disney-entrelazados-live-movie-poster_2fbe5afe.jpg"
+      },
+      { "id": 2,
+      "title": "Movie 2",
+      "year": "2000",
+      "poster": "https://xl.movieposterdb.com/23_05/2022/24855976/xl_path-of-the-panther-movie-poster_936b7746.jpg?v=2023-05-06%2000:52:57"
+      },
+      {
+        "id": 3,
+        "title": "Movie 3",
+        "year": "2002",
+        "poster": "https://posters.movieposterdb.com/23_05/2021/14218830/l_abbott-elementary-movie-poster_eabe624d.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Movie 4",
+        "year": "2003",
+        "poster": "https://posters.movieposterdb.com/23_05/2023/27443477/l_larva-family-movie-poster_7ca23eea.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Movie 5",
+        "year": "2004",
+        "poster": "https://posters.movieposterdb.com/23_05/2023/14688458/l_silo-movie-poster_9525bd0b.jpg"
+      }
+    ]
+  }
