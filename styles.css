@@ -18,3 +18,75 @@ input[type="text"] {
     padding: 0.5rem;
     width: 60%;
 }
+button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+#movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.movie-card {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 300px;
+}
+
+.movie-card img {
+    border-radius: 5px;
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+    max-width: 300px; /* Added max-width */
+}
+
+.save-favorite, .remove-favorite {
+    align-self: flex-end;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.remove-favorite {
+    background-color: #dc3545;
+}
+
+.save-favorite:hover, .remove-favorite:hover {
+    filter: brightness(0.9);
+}
+
+.save-favorite:active, .remove-favorite:active {
+    filter: brightness(0.8);
+}
+
+
+
+
