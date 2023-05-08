@@ -46,3 +46,18 @@ if (favorites) {
         movieContainer.innerHTML = '<p>No movies found.</p>';
     }
 }
+function displayMovies(movies, isFavorite) {
+    movieContainer.innerHTML = '';
+    movies.forEach((movie) => {
+        // Create a movie card for each movie
+        const movieCard = document.createElement('div');
+        movieCard.className = 'movie-card';
+        movieCard.innerHTML = `
+            <h2>${movie.title}</h2>
+            <img src="${movie.poster}" alt="${movie.title}">
+            <p>Released: ${movie.year}</p>
+            <button class="save-favorite" data-id="${movie.id}" ${isFavorite ? 'hidden' : ''}>Save to Favorites</button>
+            <button class="remove-favorite" data-id="${movie.id}" ${isFavorite ? '' : 'hidden'}>Remove from Favorites</button>
+        `;
+        const saveFavoriteButton = movieCard.querySelector('.save-favorite');
+        const removeFavoriteButton = movieCard.querySelector('.remove-favorite');
