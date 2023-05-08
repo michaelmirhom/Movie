@@ -30,3 +30,10 @@ if (favorites) {
             return null;
         }
     });
+     // Resolve all movie promises and filter out null values
+     const movies = (await Promise.all(moviePromises)).filter(movie => movie !== null);
+     // Display favorite movies
+     displayMovies(movies, true);
+ } else {
+     movieContainer.innerHTML = '<p>No favorite movies found.</p>';
+ }
