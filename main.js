@@ -37,3 +37,12 @@ if (favorites) {
  } else {
      movieContainer.innerHTML = '<p>No favorite movies found.</p>';
  }
+ async function fetchMovies(searchTerm) {
+    const response = await fetch(`http://localhost:3000/movies?q=${searchTerm}`);
+    const data = await response.json();
+    if (data.length > 0) {
+        displayMovies(data, false);
+    } else {
+        movieContainer.innerHTML = '<p>No movies found.</p>';
+    }
+}
