@@ -66,3 +66,13 @@ function displayMovies(movies, isFavorite) {
             saveFavoriteButton.hidden = true;
             removeFavoriteButton.hidden = false;
         });
+        removeFavoriteButton.addEventListener('click', () => {
+            removeFromFavorites(movie.id);
+            saveFavoriteButton.hidden = false;
+            removeFavoriteButton.hidden = true;
+        });
+
+        // Add the movie card to the movie container
+        movieContainer.appendChild(movieCard);
+    });
+}
