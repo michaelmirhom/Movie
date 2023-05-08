@@ -5,9 +5,13 @@ To get started with the MovieFinder project, follow these steps:
 1. Clone the repository to your local machine.
 2. Install json-server globally by running npm install -g json-server.
 3. Navigate to the project directory where your db.json file is located.
-4. Start the json-server by running json-server --watch db.json. By default, json-server will use port 3000.
-5. Open the index.html file in your favorite web browser. Make sure to update the fetch URLs in your JavaScript code to match the port number used by json-server.
+4. Create a `routes.json` file in the project directory with the following content:{
+"/api/movies/*": "/movies$1"
+}
+5.  Start the json-server by running `json-server --watch db.json --routes routes.json`. By default, json-server will use port 3000.
+6. Open the `index.html` file in your favorite web browser. Make sure to update the fetch URLs in your JavaScript code to match the port number used by json-server and include the `/api/movies` route.
 The json-server will serve your custom JSON data on the specified port, allowing your MovieFinder app to fetch the movie information from the local database.
+
 # Usage
 To use the MovieFinder app:
 
