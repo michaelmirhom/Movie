@@ -49,7 +49,6 @@ if (favorites) {
 function displayMovies(movies, isFavorite) {
     movieContainer.innerHTML = '';
     movies.forEach((movie) => {
-        // Create a movie card for each movie
         const movieCard = document.createElement('div');
         movieCard.className = 'movie-card';
         movieCard.innerHTML = `
@@ -72,7 +71,16 @@ function displayMovies(movies, isFavorite) {
             removeFavoriteButton.hidden = true;
         });
 
-        // Add the movie card to the movie container
+     
         movieContainer.appendChild(movieCard);
     });
 }
+function saveToFavorites(id) {
+    // Get the current list of favorites from local storage
+    let favorites = localStorage.getItem('favorites');
+
+    if (favorites) {
+        favorites = JSON.parse(favorites);
+    } else {
+        favorites = [];
+    }
