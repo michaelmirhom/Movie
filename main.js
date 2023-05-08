@@ -16,3 +16,17 @@ showFavoritesButton.addEventListener('click', showFavoriteMovies);
 function clearSearchInput() {
     searchInput.value = '';
 }
+let favorites = localStorage.getItem('favorites');
+if (favorites) {
+    favorites = JSON.parse(favorites);
+    // Fetch movie data for each favorite movie ID
+    const moviePromises = favorites.map(async (id) => {
+        const response = await fetch(`http://localhost:3000/movies/${id}`);
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        } else {
+            console.error(`Error fetching movie with ID ${id}: ${response.statusText}`);
+            return null;
+        }
+    });
