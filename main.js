@@ -61,3 +61,8 @@ function displayMovies(movies, isFavorite) {
         `;
         const saveFavoriteButton = movieCard.querySelector('.save-favorite');
         const removeFavoriteButton = movieCard.querySelector('.remove-favorite');
+        saveFavoriteButton.addEventListener('click', () => {
+            saveToFavorites(movie.id);
+            saveFavoriteButton.hidden = true;
+            removeFavoriteButton.hidden = false;
+        });
